@@ -161,7 +161,7 @@ account = generate_account()
 ##########################################
 
 # Write the client's Ethereum account address to the sidebar
-st.sidebar.write(account.address)
+st.sidebar.write(w3,account.address)
 
 ##########################################
 # Step 1 - Part 5:
@@ -172,7 +172,7 @@ st.sidebar.write(account.address)
 # @TODO
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
-st.sidebar.write(get_balance(address=account.address))
+st.sidebar.write(get_balance(w3,address=account.address))
 
 ##########################################
 
@@ -294,7 +294,7 @@ if st.sidebar.button("Send Transaction"):
     # Call the `send_transaction` function and pass it 3 parameters:
     # Your `account`, the `candidate_address`, and the `wage` as parameters
     # Save the returned transaction hash as a variable named `transaction_hash`
-    send_transaction(account,candidate_address,wage=wage)
+    send_transaction(w3,account,candidate_address,wage=wage)
 
     transaction_hash = send_transaction
 
@@ -347,3 +347,6 @@ get_people()
 # * Click the transaction and take a screenshot of it.
 # Save this screenshot to the README.md file of your GitHub repository for
 #  this Challenge assignment.
+
+
+#  streamlit run /Users/playb3yond40gb/PycharmProjects/Krypto_Job_Finder/krypto_jobs.py
