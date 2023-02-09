@@ -346,4 +346,3 @@ get_people()
 #  this Challenge assignment.
 
 
-#  streamlit run /Users/playb3yond40gb/PycharmProjects/Krypto_Job_Finder/krypto_jobs.py
